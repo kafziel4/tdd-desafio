@@ -2,6 +2,8 @@
 {
     public class Calculator
     {
+        private const int MaxHistoryEntries = 3;
+
         private readonly List<string> _history;
 
         public Calculator()
@@ -44,8 +46,11 @@
 
         private void AddHistory(int result)
         {
-            if (_history.Count >= 3)
-                _history.RemoveRange(2, _history.Count - 2);
+            if (_history.Count >= MaxHistoryEntries)
+            {
+                int index = MaxHistoryEntries - 1;
+                _history.RemoveRange(index, _history.Count - index);
+            }
 
             _history.Insert(0, $"Result: {result}");
         }
