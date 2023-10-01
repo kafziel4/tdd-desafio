@@ -8,7 +8,8 @@ namespace DesafioTDD.Tests
 
         public CalculatorTests()
         {
-            _calculator = new Calculator();
+            string date = "02/02/2020";
+            _calculator = new Calculator(date);
         }
 
         [Theory]
@@ -91,8 +92,8 @@ namespace DesafioTDD.Tests
 
             // Assert
             result.Should().HaveCount(2);
-            result[0].Should().Be("Result: 11");
-            result[1].Should().Be("Result: 3");
+            result[0].Should().Be("Result: 11 - Date: 02/02/2020");
+            result[1].Should().Be("Result: 3 - Date: 02/02/2020");
         }
 
         [Fact]
@@ -108,9 +109,9 @@ namespace DesafioTDD.Tests
 
             // Assert
             result.Should().HaveCount(3);
-            result[0].Should().Be("Result: 10");
-            result[1].Should().Be("Result: 11");
-            result[2].Should().Be("Result: 3");
+            result[0].Should().Be("Result: 10 - Date: 02/02/2020");
+            result[1].Should().Be("Result: 11 - Date: 02/02/2020");
+            result[2].Should().Be("Result: 3 - Date: 02/02/2020");
         }
 
         [Fact]
@@ -127,9 +128,9 @@ namespace DesafioTDD.Tests
 
             // Assert
             result.Should().HaveCount(3);
-            result[0].Should().Be("Result: 5");
-            result[1].Should().Be("Result: 10");
-            result[2].Should().Be("Result: 11");
+            result[0].Should().Be("Result: 5 - Date: 02/02/2020");
+            result[1].Should().Be("Result: 10 - Date: 02/02/2020");
+            result[2].Should().Be("Result: 11 - Date: 02/02/2020");
         }
     }
 }

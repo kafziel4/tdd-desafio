@@ -6,7 +6,7 @@
 
         private readonly List<string> _history;
 
-        public Calculator()
+        public Calculator(string date)
         {
             _history = new();
         }
