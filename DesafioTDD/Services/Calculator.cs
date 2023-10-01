@@ -5,10 +5,12 @@
         private const int MaxHistoryEntries = 3;
 
         private readonly List<string> _history;
+        private readonly string _date;
 
         public Calculator(string date)
         {
             _history = new();
+            _date = date;
         }
 
         public int Sum(int value1, int value2)
@@ -52,7 +54,7 @@
                 _history.RemoveRange(index, _history.Count - index);
             }
 
-            _history.Insert(0, $"Result: {result}");
+            _history.Insert(0, $"Result: {result} - Date: {_date}");
         }
     }
 }
