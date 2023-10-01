@@ -4,7 +4,8 @@
     {
         public int Sum(int value1, int value2)
         {
-            return -1;
+            int result = value1 + value2;
+            return result;
         }
 
         public int Subtract(int value1, int value2)
