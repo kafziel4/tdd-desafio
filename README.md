@@ -1,6 +1,6 @@
 # DIO - Desafio TDD
 
-[www.dio.me](www.dio.me)
+[www.dio.me](https://www.dio.me/)
 
 ## Descrição
 
